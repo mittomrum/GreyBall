@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class PlatformController : MonoBehaviour
 {
-    private Rigidbody ballRigidbody;
+    public Rigidbody ballRigidbody;
     private bool isMoving = false;
     [SerializeField] private float accelarate = 0.1f;
     private float speed = 0f;
     private float maxHeight = 0f;
-    private float shootForce = 10f;
-
-    private void Start()
-    {
-        ballRigidbody = GameObject.FindWithTag("Ball").GetComponent<Rigidbody>();
-    }
+    private float shootForce = 20f;
 
     public void MovePlatformUp(float ballMass)
     {
